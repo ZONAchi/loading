@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color: #c87253;
+    background-image: url(../img/下載9.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+@keyframes circle {
+    25% {
+        transform: rotatez(90deg);
+    }
+
+    50% {
+        transform: rotatez(180deg);
+    }
+
+    75% {
+        transform: rotatez(270deg);
+    }
+
+    100% {
+        transform: rotatez(359deg);
+    }
+}
+
+@keyframes small {
+    0% {
+        transform: translate(-20px, 0);
+    }
+
+    50% {
+        transform: translate(20px, 0);
+    }
+
+    100% {
+        transform: translate(-20px, 0);
+    }
+}
+
+@keyframes box {
+    0% {
+        transform: translate(-300px, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(300px, 0);
+    }
+}
+
+.rectangle {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rectangle-box {
+    width: 300px;
+    height: 100px;
+    background-color: #E6DCA2;
+    padding:30px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    animation: box 2s infinite;
+}
+
+.all {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: circle 4s infinite;
+}
+
+.all:hover .circle {
+    box-shadow: 0 0 500px 150px #f6ebe7;
+    background-color: #DCC6A6;
+    background-image: none;
+}
+
+.all:hover .small-circle {
+    background-color: #4D6EAC;
+}
+
+.all:hover .square {
+    background-color: #DC8705;
+    background-image: url(../img/5dc97710-b4d8-45b6-a8fa-6095233a6955.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.all:hover~.rectangle .rectangle-box {
+    background-color: #e7673d;
+    background-image: url(../img/pink-Wallpaper.jpg);
+}
+
+.circle {
+    width: 300px;
+    height: 150px;
+    border-radius: 300px 300px 0 0;
+    background-color: #daebe3;
+    background-image: url(../img/green-3.jpg);
+    background-size: cover;
+}
+
+.small-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: #99cdd8;
+    animation: small 1s infinite;
+}
+
+
+.square {
+    width: 150px;
+    height: 150px;
+    // background-color: #657166;
+    background-image: url(../img/green-1.jpg);
+    animation: circle 4s infinite;
+}
